@@ -34,3 +34,9 @@ function intersection(firstArray, secondArray) {
 }
 
 export { sum, average, unique, chunk, intersection };
+
+console.log('sum:', sum([1, 2, 3, 4]));
+console.log('average:', average([2, 4, 6]));
+console.log('unique:', unique([1, 2, 2, 3, 1, 4]));
+console.log('chunk:', chunk([1, 2, 3, 4, 5], 2));
+console.log('intersection:', intersection([1, 2, 3], [2, 3, 4]));
