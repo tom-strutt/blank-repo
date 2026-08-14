@@ -12,10 +12,27 @@ export function truncate(string, length) {
 
     if (string.length > length) {
         return string.slice(0, length) + '...';
-
     }
+    return string;
 }
 
-console.log(truncate('hello world', 3));
-console.log(capitalise('software construction'));
-console.log(capitalise(''));
+export function camelCase(string) {
+    const words = string.toLowerCase().split(' ');
+
+    const camelCasedWords = words.map((word, index) => {
+        if (index === 0) {
+            return word;
+        }
+        else {
+            return capitalise(word);
+        }
+    })
+    return camelCasedWords.join('');
+}
+
+const word = 'software construction';
+const truncateLength = 5
+
+console.log("Capitalise: ", capitalise(word));
+console.log("Truncate: ", truncate(word, truncateLength));
+console.log("Camel Case: ", camelCase(word));
