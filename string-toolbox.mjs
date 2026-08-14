@@ -30,9 +30,25 @@ export function camelCase(string) {
     return camelCasedWords.join('');
 }
 
-const word = 'software construction';
+export function reverse(string) {
+    const characters = string.split('');
+    characters.reverse();
+    return characters.join('');
+}
+
+export function isPalindrome(string) {
+    const reversedString = reverse(string);
+    if (string === reversedString) {
+        return true;
+    }
+    else return false;
+}
+
+const word = 'racecar';
 const truncateLength = 5
 
 console.log("Capitalise: ", capitalise(word));
 console.log("Truncate: ", truncate(word, truncateLength));
 console.log("Camel Case: ", camelCase(word));
+console.log("Reverse: ", reverse(word));
+console.log("Is Palindrome: ", isPalindrome(word));
